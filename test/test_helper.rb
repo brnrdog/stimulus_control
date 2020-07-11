@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
@@ -10,6 +12,7 @@ Minitest.backtrace_filter = Minitest::BacktraceFilter.new
 
 require "rails/test_unit/reporter"
 Rails::TestUnitReporter.executable = 'bin/test'
+require 'stimulus_control'
 
 # Load fixtures from the engine
 if ActiveSupport::TestCase.respond_to?(:fixture_path=)
