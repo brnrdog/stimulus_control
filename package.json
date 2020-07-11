@@ -1,0 +1,26 @@
+{
+  "name": "stimulus-control",
+  "version": "0.0.1",
+  "description": "Short description and motivation.",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brnrdog/stimulus_control.git"
+  },
+  "author": "Bernardo Gurgel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brnrdog/stimulus_control/issues"
+  },
+  "homepage": "https://github.com/brnrdog/stimulus_control#readme",
+  "dependencies": {
+    "stimulus": "^1.1.1"
+  }
+}
