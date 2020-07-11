@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'action_view'
 
 class StimulusControl::FormHelperTest < ActionView::TestCase
   test "stimulus_form_with(url: '/')" do

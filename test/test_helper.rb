@@ -15,6 +15,7 @@ Minitest.backtrace_filter = Minitest::BacktraceFilter.new
 require "rails/test_unit/reporter"
 Rails::TestUnitReporter.executable = 'bin/test'
 require 'stimulus_control'
+require 'stimulus_control/form_helper'
 
 # Load fixtures from the engine
 if ActiveSupport::TestCase.respond_to?(:fixture_path=)
