@@ -8,15 +8,15 @@ module StimulusControl
       options[:builder]           ||= StimulusControl::FormBuilder
       options[:data]              ||= {}
       options[:class]             ||= form_class
-      options[:data][:controller] ||= data_controller
+      options[:data][:controller] ||= form_controller
 
       form_with(**options, &block)
     end
 
     private
 
-    def data_controller
-      { controller: "stimulus-control" }
+    def form_controller
+      "stimulus-control"
     end
 
     def form_class
