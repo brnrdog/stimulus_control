@@ -12,7 +12,13 @@ export class FieldController extends Controller {
       maxLength: parseInt(dataset.maxLength, 10),
       pattern: dataset.pattern,
     };
-    this.i18n = JSON.parse(this.element.dataset.i18n);
+    this.i18n = {
+      validation: {
+        minLength: "Maximum %{minLength} characters.",
+        maxLength: "Minimum %{maxLength} characters.",
+        required: "This field is required.",
+      },
+    };
     console.log(this.i18n);
   }
 
