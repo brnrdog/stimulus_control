@@ -1,8 +1,9 @@
 import resolve from "@rollup/plugin-node-resolve";
 
 export default {
-  input: "./src/stimulus_control.js",
+  input: "./src/index.js",
   output: {
+    name: "StimulusControl",
     file: "./lib/generators/stimulus_control/templates/stimulus_control.js",
     format: "iife",
     globals: {

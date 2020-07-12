@@ -14,3 +14,6 @@
 //= require activestorage
 //= require_tree .
 //= require stimulus_control
+
+const application = Stimulus.Application.start();
+application.register("field   ", StimulusControl.FieldController);

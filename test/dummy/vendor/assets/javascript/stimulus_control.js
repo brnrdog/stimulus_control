@@ -1,4 +1,4 @@
-(function () {
+var StimulusControl = (function (exports) {
     'use strict';
 
     var EventListener = /** @class */ (function () {
@@ -1649,16 +1649,16 @@
         };
         this.i18n = {
           validation: {
-            minLength: "No máximo %{minLength} caracteres.",
-            maxLength: "No mínimo %{maxLength} caracteres.",
-            required: "Este campo é obrigatório.",
+            minLength: "Minimum %{minLength} characters.",
+            maxLength: "Maximum %{maxLength} characters.",
+            required: "This field is required.",
           },
         };
-        console.log(this.i18n);
       }
 
       validate() {
         const presenceValid = this._validatePresence();
+
         if (presenceValid) {
           this.invalidate();
           this.errorTarget.innerHTML = this.i18n.validation.required;
@@ -1744,7 +1744,11 @@
       }
     }
 
-    const application = Application.start();
-    application.register("field", FieldController);
+    class FormController extends Controller {}
 
-}());
+    exports.FieldController = FieldController;
+    exports.FormController = FormController;
+
+    return exports;
+
+}({}));

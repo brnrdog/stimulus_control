@@ -14,16 +14,16 @@ export class FieldController extends Controller {
     };
     this.i18n = {
       validation: {
-        minLength: "Maximum %{minLength} characters.",
-        maxLength: "Minimum %{maxLength} characters.",
+        minLength: "Minimum %{minLength} characters.",
+        maxLength: "Maximum %{maxLength} characters.",
         required: "This field is required.",
       },
     };
-    console.log(this.i18n);
   }
 
   validate() {
     const presenceValid = this._validatePresence();
+
     if (presenceValid) {
       this.invalidate();
       this.errorTarget.innerHTML = this.i18n.validation.required;
