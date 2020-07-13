@@ -32,6 +32,14 @@ Add stimulus_control to your javascript manifest file:
 //= require stimulus_control
 ```
 
+Setup Stimulus Control controllers for you Stimulus application:
+
+```js
+const application = Stimulus.Application.start();
+application.register("StimulusControlForm", StimulusControl.FormController);
+application.register("StimulusControlField", StimulusControl.FieldController);
+```
+
 ## Contributing
 
 Contribution directions go here.
