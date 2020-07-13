@@ -21,7 +21,7 @@ module StimulusControl
     private
   
     def label_tag(label)
-      @template.label_tag(label, nil, class: @@label_class, data: { target: "field.label" })
+      @template.label_tag(label, nil, class: @@label_class, data: { target: "StimulusControlField.label" })
     end
   
     def field_tag(method_name, object_name, method, options, &block)
@@ -32,8 +32,8 @@ module StimulusControl
           object_name, 
           method,
           data: { 
-            action: 'input->field#touch input->field#resetValidation blur->field#validate',
-            target: 'field.input',
+            action: 'input->StimulusControlField#touch input->StimulusControlField#resetValidation blur->StimulusControlField#validate',
+            target: 'StimulusControlField.input',
             min_length: options[:min_length],
             max_length: options[:max_length],
             pattern: options[:pattern],
@@ -44,12 +44,12 @@ module StimulusControl
             "div", 
             nil, 
             data: {
-              target: 'field.error'
+              target: 'StimulusControlField.error'
             },
             class: @@error_class
           ),
         data: {
-          controller: 'field',
+          controller: 'StimulusControlField',
         }
       )
     end
