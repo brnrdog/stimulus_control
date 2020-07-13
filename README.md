@@ -1,10 +1,20 @@
 # StimulusControl
 
-Short description and motivation.
+Rails form validations powered by Stimulus controllers.
 
 ## Usage
 
-How to use my plugin.
+Use `stimulus_form_with` helper to build form in your Rails views:
+
+```erb
+<%= stimulus_form_with url: '/register' do |form| %>
+  <%= form.text_field :name, "", label: "Name", required: true, min_length: 2 %>
+  <%= form.email_field :email, "", label: "Email", required: true, pattern: "^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$" %>
+  <%= form.password_field :password, "", label: "Password", required: true, min_length: 4 %>
+  <%= form.text_area_field :bio, "", label: "Bio", max_length: 250 %>
+  <%= form.submit %>
+<% end %>
+```
 
 ## Installation
 
