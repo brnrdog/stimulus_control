@@ -1,6 +1,16 @@
-<%= stimulus_form_with url: '#' do |form| %>
-  <%= form.text_field :name, "", required: true, max_length: 4 %>
-  <%= form.password_field :password, "" %>
-  <%= form.text_area_field :bio, "" %>
-  <%= form.submit %>
-<% end %>
+<div class="container mx-auto p-8">
+  <%= stimulus_form_with url: '#' do |form| %>
+    <div class="mb-4">
+      <%= form.text_field "Name", "", label: "Name", required: true, min_length: 4, max_length: 10 %> 
+    </div>
+    <div class="mb-4">
+      <%= form.text_field "Email", "", label: "Email", required: true, pattern: "^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$" %>
+    </div>
+    <div class="mb-4">
+      <%= form.text_area_field "Bio", "", label: "Bio", required: true, min_length: 4, max_length: 10 %> 
+    </div>
+    <div class="mb-4">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>

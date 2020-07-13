@@ -16,4 +16,5 @@
 //= require stimulus_control
 
 const application = Stimulus.Application.start();
-application.register("field   ", StimulusControl.FieldController);
+application.register("StimulusControlForm", StimulusControl.FormController);
+application.register("StimulusControlField", StimulusControl.FieldController);

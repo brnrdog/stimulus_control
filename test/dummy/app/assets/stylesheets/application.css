@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.label {
+  display: block;
+}
+
+.field {
+  border: 1px solid #aaa;
+  padding: 0.0125rem 0.5rem;
+  outline: none;
+}
+
+.field:focus {
+  box-shadow: 0 0 0 4px #ddd;
+}
+
+.error {
+  color: tomato;
+}
